@@ -13,7 +13,7 @@ function draw() {
     rocket.show();
   }
   for( let rocket of rockets){
-    if (rocket.counter < 0){
+    if (rocket.counter < 0 || rocket.pos.x < 0 || rocket.pos.x < 0 || rocket.pos.x > width){
       explosions.push(new Explosion(rocket.pos.x,rocket.pos.y,rocket.col));
       rockets.splice(rockets.indexOf(rocket),1);
     }
@@ -81,10 +81,10 @@ class Particles{
 class Rocket{
   constructor(_x,_y){
     this.pos = createVector(_x,_y);
-    this.vel = createVector(0,-5);
+    this.vel = createVector(random(-0.5,0.5),-5);
     this.acc = createVector(0,0);
     this.col = [random(100,255),random(100,255),random(100,255)];
-    this.counter = random(70,130);
+    this.counter = random(100,120);
   }
   update(){
     this.acc = createVector(random(-0.5,0.5),0);
