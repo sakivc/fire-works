@@ -15,7 +15,7 @@ function draw() {
     rocket.show();
   }
   for( let rocket of rockets){
-    if (rocket.counter < 0 || rocket.pos.x < 0 || rocket.pos.x < 0 || rocket.pos.x > width){
+    if (rocket.counter < 0 || rocket.pos.y < 0 || rocket.pos.x < 0 || rocket.pos.x > width){
       explosions.push(new Explosion(rocket.pos.x,rocket.pos.y,rocket.col));
       rockets.splice(rockets.indexOf(rocket),1);
     }
