@@ -63,7 +63,7 @@ class Particles{
     for (let c of _col){
       this.col.push(c + random(-10,10));
     }
-    this.counter = random(20,80);
+    this.counter = random(20,height/2);
   }
   update(){
     this.vel.add(this.acc);
@@ -86,7 +86,7 @@ class Rocket{
     this.vel = createVector(random(-0.5,0.5),-5);
     this.acc = createVector(0,0);
     this.col = [random(100,255),random(100,255),random(100,255)];
-    this.counter = random(100,120);
+    this.counter = random(100,height);
   }
   update(){
     this.acc = createVector(random(-0.5,0.5),0);
