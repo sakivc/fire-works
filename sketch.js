@@ -86,7 +86,7 @@ class Rocket{
     this.vel = createVector(random(-0.5,0.5),-5);
     this.acc = createVector(0,0);
     this.col = [random(100,255),random(100,255),random(100,255)];
-    this.counter = random(100,height);
+    this.counter = random(50,height/5);
   }
   update(){
     this.acc = createVector(random(-0.5,0.5),0);
