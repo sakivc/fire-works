@@ -2,7 +2,9 @@ var rockets = [];
 var explosions = [];
 
 function setup() {
-  createCanvas(800, 800);
+  let W = windowWidth / 2;
+  let H = windowHeight * 2 / 3;
+  createCanvas(W, H);
 }
 
 function draw() {
@@ -105,17 +107,17 @@ function showForeground(){
   push();
   fill(55);
   noStroke();
-  rect(0,700,800,100);
+  rect(0,height-100,width,100);
   fill(255);
   textAlign(CENTER,CENTER);
-  text('- - - - - - - - - - - - - - - -',400,738);
-  text('C L I C K   H E R E',400,750);
-  text('- - - - - - - - - - - - - - - -',400,760);
+  text('- - - - - - - - - - - - - - - -',width/2,height-61);
+  text('C L I C K   H E R E',width/2,height-50);
+  text('- - - - - - - - - - - - - - - -',width/2,height-40);
   pop();
 }
 
 function mouseClicked(){
-  if (mouseY > 700){
+  if (mouseY > height - 100){
     rockets.push(new Rocket(mouseX,mouseY));
   }
 }
